@@ -1,0 +1,20 @@
+﻿<html>
+<head>
+
+</head>
+<body>
+    <input id="fileInput" accept=".json" type="file" onchange="displayProperties()"/> 
+
+    <div id="container"></div>
+
+    <script>
+        
+        function displayProperties() {
+            var el = document.getElementById("container");
+
+            var file = document.getElementById("fileInput").value;
+            console.log("Happened")
+        }
+    </script>
+</body>
+</html>
