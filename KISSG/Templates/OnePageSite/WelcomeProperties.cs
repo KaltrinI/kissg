@@ -19,11 +19,8 @@ namespace KISSG.Templates.OnePageSite
         public string MainSectionTxtColor { get; set; }
         public string MainSection { get; set; }
         public string PictureUrl { get; set; }
-
-        public string Projects { get; set; }
-
         [NotMapped]
-        public List<string> ProjetsList { get; set; }
+        public List<string> Projects { get; set; }
         public string ContactSectionBgColor { get; set; }
         public string ContactSectionTxtColor { get; set; }
         public string Email { get; set; }

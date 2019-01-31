@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using KISSG.Context;
 using KISSG.Templates.OnePageSite;
+using Microsoft.AspNetCore.Http;
+using System.IO;
+using System.Text;
 
 namespace KISSG.Controllers
 {
@@ -58,14 +61,17 @@ namespace KISSG.Controllers
         {
             if (ModelState.IsValid)
             {
-
                 String pageContent = welcome.TransformText();
                 System.IO.File.WriteAllText("outputPage.html", pageContent);
 
-                _context.Add(welcome);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                Response.Clear();
+                Response.Headers.Clear();
+                Response.Headers.Add("Content-Disposition", "attachment; filename=outputPage.html");
+                Response.Headers.Add("Content-Length", pageContent.Length.ToString());
+                Response.ContentType = "text/plain";
+                await Response.SendFileAsync("outputPage.html");
             }
+            
             return View(welcome);
         }
 

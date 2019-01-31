@@ -123,7 +123,7 @@ namespace KISSG.Templates.OnePageSite
             
             #line default
             #line hidden
-            this.Write("; display: inline-block\">\r\n    ");
+            this.Write("; display: inline\">\r\n    ");
             
             #line 46 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
  foreach (var pr in Projects)
@@ -168,23 +168,42 @@ namespace KISSG.Templates.OnePageSite
             
             #line default
             #line hidden
-            this.Write("\"> E-mail</i>\r\n    </p>\r\n    <p>\r\n        <i class=\"fas fa-phone-square\" style=\"c" +
-                    "olor: ");
+            this.Write("\"> E-mail ");
+            
+            #line 58 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(Email));
+            
+            #line default
+            #line hidden
+            this.Write("</i>\r\n    </p>\r\n    <p>\r\n        <i class=\"fas fa-phone-square\" style=\"color: ");
             
             #line 61 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ContactSectionTxtColor));
             
             #line default
             #line hidden
-            this.Write("\"> Phone</i>\r\n    </p>\r\n    <p>\r\n        <i class=\"fas fa-map-marker-alt\" style=\"" +
-                    "color: ");
+            this.Write("\"> Phone ");
+            
+            #line 61 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(Phone));
+            
+            #line default
+            #line hidden
+            this.Write("</i>\r\n    </p>\r\n    <p>\r\n        <i class=\"fas fa-map-marker-alt\" style=\"color: ");
             
             #line 64 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ContactSectionTxtColor));
             
             #line default
             #line hidden
-            this.Write("\"> Address</i>\r\n    </p>\r\n\r\n</div>\r\n</body>\r\n</html>");
+            this.Write("\"> Address ");
+            
+            #line 64 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(Address));
+            
+            #line default
+            #line hidden
+            this.Write("</i>\r\n    </p>\r\n\r\n</div>\r\n</body>\r\n</html>");
             return this.GenerationEnvironment.ToString();
         }
     }
@@ -200,7 +219,7 @@ namespace KISSG.Templates.OnePageSite
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;
-        //private global::System.CodeDom.Compiler.CompilerErrorCollection errorsField;
+       
         private global::System.Collections.Generic.List<int> indentLengthsField;
         private string currentIndentField = "";
         private bool endsWithNewline;
@@ -228,17 +247,7 @@ namespace KISSG.Templates.OnePageSite
         /// <summary>
         /// The error collection for the generation process
         /// </summary>
-        //public System.CodeDom.Compiler.CompilerErrorCollection Errors
-        //{
-        //    get
-        //    {
-        //        if ((this.errorsField == null))
-        //        {
-        //            this.errorsField = new global::System.CodeDom.Compiler.CompilerErrorCollection();
-        //        }
-        //        return this.errorsField;
-        //    }
-        //}
+        
         /// <summary>
         /// A list of the lengths of each indent that was added with PushIndent
         /// </summary>
@@ -347,22 +356,7 @@ namespace KISSG.Templates.OnePageSite
         /// <summary>
         /// Raise an error
         /// </summary>
-        public void Error(string message)
-        {
-            //System.CodeDom.Compiler.CompilerError error = new global::System.CodeDom.Compiler.CompilerError();
-            //error.ErrorText = message;
-            //this.Errors.Add(error);
-        }
-        /// <summary>
-        /// Raise a warning
-        /// </summary>
-        public void Warning(string message)
-        {
-            //System.CodeDom.Compiler.CompilerError error = new global::System.CodeDom.Compiler.CompilerError();
-            //error.ErrorText = message;
-            //error.IsWarning = true;
-            //this.Errors.Add(error);
-        }
+       
         /// <summary>
         /// Increase the indent
         /// </summary>

@@ -10,14 +10,18 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Create</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
 </head>
 <body>
 
 <h4>welcome</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
+    <div class="col-md-6" style="margin:20px">
+        <form asp-action="Create" style="overflow-y:scroll; height:100vh">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="FirstSectionColor" class="control-label"></label>
@@ -59,11 +63,14 @@
                 <input asp-for="PictureUrl" class="form-control" />
                 <span asp-validation-for="PictureUrl" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Projects" class="control-label"></label>
-                <input asp-for="Projects" class="form-control" />
-                <span asp-validation-for="Projects" class="text-danger"></span>
+            <div id="work">
+                <div class="form-group">
+                    <label asp-for="Projects[0]" class="control-label"></label>
+                    <input asp-for="Projects[0]" class="form-control" />
+                    <span asp-validation-for="Projects[0]" class="text-danger"></span>
+                </div>
             </div>
+            <i class="fas fa-plus-circle" style="color:purple; float:right ; display:block ; clear:both" onclick="addProject()">Add project</i>
             <div class="form-group">
                 <label asp-for="ContactSectionBgColor" class="control-label"></label>
                 <input asp-for="ContactSectionBgColor" class="form-control" />
@@ -90,18 +97,37 @@
                 <span asp-validation-for="Address" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-success" />
             </div>
         </form>
     </div>
+    <div class="col-md-6">
+        <img src=""  alt="dsasa"/>
+    </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
+<script>
+    var index = 1;
+
+    function addProject() {
+        var elem = document.getElementById("work");
+        var str = '<div class="form-group">\n';
+        str += '<label class="control-label" for="Projects_'+index+'_" >Projects['+index+']</label>\n'
+        str += '<input class="form-control" type="text" id="Projects_'+index+'_"  name="Projects['+index+']" value >\n'
+        str += '<span class="text-danger field-validation-valid" data-valmsg-for="Projects[' + index + ']"  ></span>\n'
+        str += '</div>';
+        index++;
+        elem.insertAdjacentHTML('beforeend', str);
+    }
+</script>
+
+    
+
+
 </body>
 </html>
