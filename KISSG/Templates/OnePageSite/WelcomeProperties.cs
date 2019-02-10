@@ -6,27 +6,23 @@ using System.Threading.Tasks;
 
 namespace KISSG.Templates.OnePageSite
 {
-    partial class welcome
+    partial class Welcome : HtmlTemplate
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public string SiteName { get; set; }
         public string FirstSectionColor { get; set; }
         public string LogoUrl { get; set; }
         public string Motto { get; set; }
         public string MottoColor { get; set; }
-
         public string MainSectionBgColor { get; set; }
         public string MainSectionTxtColor { get; set; }
         public string MainSection { get; set; }
         public string PictureUrl { get; set; }
-        [NotMapped]
         public List<string> Projects { get; set; }
         public string ContactSectionBgColor { get; set; }
         public string ContactSectionTxtColor { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
         public string Address { get; set; }
-
-
+        
     }
 }

@@ -18,9 +18,9 @@ namespace KISSG.Templates.OnePageSite
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+    #line 1 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
-    public partial class welcome : welcomeBase
+    public partial class Welcome : WelcomeBase
     {
 #line hidden
         /// <summary>
@@ -58,14 +58,14 @@ namespace KISSG.Templates.OnePageSite
 </div>
 <div id=""firstSection"" style=""background-color: ");
             
-            #line 34 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 34 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(FirstSectionColor));
             
             #line default
             #line hidden
             this.Write("; padding-top: 40px; width: 100%; display: inline-block\">\r\n    <img src=");
             
-            #line 35 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 35 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(LogoUrl));
             
             #line default
@@ -73,14 +73,14 @@ namespace KISSG.Templates.OnePageSite
             this.Write(" style=\"height: 200px; width: 200px\">\r\n    <p style=\"font-size: 40px; text-align:" +
                     " center; color: ");
             
-            #line 36 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 36 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(MottoColor));
             
             #line default
             #line hidden
             this.Write("\">");
             
-            #line 36 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 36 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Motto));
             
             #line default
@@ -88,74 +88,74 @@ namespace KISSG.Templates.OnePageSite
             this.Write("</p>\r\n</div>\r\n<div id=\"mainSection\" style=\"padding-left: 20%; padding-right: 20%;" +
                     " background-color: ");
             
-            #line 38 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 38 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(MainSectionBgColor));
             
             #line default
             #line hidden
             this.Write("\">\r\n    <p style=\"color: ");
             
-            #line 39 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 39 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(MainSectionTxtColor));
             
             #line default
             #line hidden
             this.Write("\">\r\n        ");
             
-            #line 40 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 40 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(MainSection));
             
             #line default
             #line hidden
             this.Write("\r\n    </p>\r\n    <img src= \"");
             
-            #line 42 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 42 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(PictureUrl));
             
             #line default
             #line hidden
             this.Write("\"\r\n         style=\"display: block; margin-left: auto; margin-right: auto; width: " +
-                    "50%;\">\r\n</div>\r\n<div id=\"work\" style=\"padding-left: 20%; padding-right: 20%; bac" +
-                    "kground-color: ");
+                    "50%;\">\r\n</div>\r\n<div id=\"work\" style=\"width:100%; padding-left: 20%; padding-rig" +
+                    "ht: 20%; background-color: ");
             
-            #line 45 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 45 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(MainSectionBgColor));
             
             #line default
             #line hidden
-            this.Write("; display: inline\">\r\n    ");
+            this.Write("; display: inline-block\">\r\n    <ul>\r\n\t");
             
-            #line 46 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 47 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
  foreach (var pr in Projects)
 	{ 
             
             #line default
             #line hidden
-            this.Write(" \r\n\t<p style=\"color:");
+            this.Write(" \r\n\t<li style=\"color:");
             
-            #line 48 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 49 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(MainSectionTxtColor));
             
             #line default
             #line hidden
             this.Write("\">\r\n\t");
             
-            #line 49 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 50 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(pr));
             
             #line default
             #line hidden
-            this.Write("\r\n\t</p>\r\n\t");
+            this.Write("\r\n\t</li>\r\n\t");
             
-            #line 51 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 52 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
  }
 	
             
             #line default
             #line hidden
-            this.Write("\t \r\n</div>\r\n<div id=\"contact\" style=\"background-color: ");
+            this.Write("\t</ul>\r\n</div>\r\n<div id=\"contact\" style=\"background-color: ");
             
-            #line 55 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 56 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ContactSectionBgColor));
             
             #line default
@@ -163,42 +163,42 @@ namespace KISSG.Templates.OnePageSite
             this.Write("; padding: 20px 20%\">\r\n\r\n    <p>\r\n        <i class=\"fas fa-envelope-square\" style" +
                     "=\"color: ");
             
-            #line 58 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 59 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ContactSectionTxtColor));
             
             #line default
             #line hidden
-            this.Write("\"> E-mail ");
+            this.Write("\"> E-mail: ");
             
-            #line 58 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 59 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Email));
             
             #line default
             #line hidden
             this.Write("</i>\r\n    </p>\r\n    <p>\r\n        <i class=\"fas fa-phone-square\" style=\"color: ");
             
-            #line 61 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 62 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ContactSectionTxtColor));
             
             #line default
             #line hidden
-            this.Write("\"> Phone ");
+            this.Write("\"> Phone: ");
             
-            #line 61 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 62 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Phone));
             
             #line default
             #line hidden
             this.Write("</i>\r\n    </p>\r\n    <p>\r\n        <i class=\"fas fa-map-marker-alt\" style=\"color: ");
             
-            #line 64 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 65 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ContactSectionTxtColor));
             
             #line default
             #line hidden
-            this.Write("\"> Address ");
+            this.Write("\"> Address: ");
             
-            #line 64 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\welcome.tt"
+            #line 65 "C:\Users\KaltrinI\source\repos\KISSG\KISSG\Templates\OnePageSite\Welcome.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Address));
             
             #line default
@@ -215,11 +215,10 @@ namespace KISSG.Templates.OnePageSite
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
-    public class welcomeBase
+    public class WelcomeBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;
-       
         private global::System.Collections.Generic.List<int> indentLengthsField;
         private string currentIndentField = "";
         private bool endsWithNewline;
@@ -247,7 +246,7 @@ namespace KISSG.Templates.OnePageSite
         /// <summary>
         /// The error collection for the generation process
         /// </summary>
-        
+    
         /// <summary>
         /// A list of the lengths of each indent that was added with PushIndent
         /// </summary>
@@ -356,7 +355,7 @@ namespace KISSG.Templates.OnePageSite
         /// <summary>
         /// Raise an error
         /// </summary>
-       
+
         /// <summary>
         /// Increase the indent
         /// </summary>
